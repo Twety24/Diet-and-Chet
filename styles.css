@@ -593,3 +593,461 @@ footer .rights {
     font-size: 18px;
     font-weight: 700;
 }
+
+/* Responsive layout improvements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+section {
+    min-width: 0;
+}
+
+header {
+    width: 100%;
+    min-height: 90px;
+    height: auto;
+    gap: 20px;
+    padding: 16px clamp(18px, 5vw, 64px);
+    flex-wrap: wrap;
+}
+
+header .one {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    min-width: 0;
+}
+
+header nav span,
+header .first_link,
+header .sec_link {
+    margin: 0;
+}
+
+header nav a {
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.landing,
+.page_1,
+.page_2,
+.page_3 {
+    width: 100%;
+    min-height: 360px;
+    height: calc(100svh - 90px);
+    padding: 32px 20px;
+    text-align: center;
+    font-size: clamp(30px, 5vw, 60px);
+    overflow-wrap: anywhere;
+}
+
+.about,
+.food,
+.mission,
+.vision,
+.food_1,
+.ingred_1,
+.step_1,
+.food_2,
+.ingred_2,
+.step_2,
+.food_3,
+.ingred_3,
+.step_3 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(24px, 5vw, 64px);
+    gap: clamp(22px, 4vw, 48px);
+}
+
+.about .text,
+.food .text,
+.mission .text,
+.vision .text,
+.food_1 .text,
+.ingred_1 .text,
+.step_1 .text,
+.food_2 .text,
+.ingred_2 .text,
+.step_2 .text,
+.food_3 .text,
+.ingred_3 .text,
+.step_3 .text {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.about .image,
+.food .image,
+.mission .image,
+.vision .image,
+.food_1 .image,
+.ingred_1 .image,
+.step_1 .image,
+.food_2 .image,
+.ingred_2 .image,
+.step_2 .image,
+.food_3 .image,
+.ingred_3 .image,
+.step_3 .image {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+}
+
+.about .image img,
+.food .image img,
+.mission .image img,
+.vision .image img,
+.food_1 .image img,
+.ingred_1 .image img,
+.step_1 .image img,
+.food_2 .image img,
+.ingred_2 .image img,
+.step_2 .image img,
+.food_3 .image img,
+.ingred_3 .image img,
+.step_3 .image img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.about .text div:nth-child(2),
+.food .text .one,
+.mission .text .one,
+.vision .text .one,
+.food_1 .text .one,
+.ingred_1 .text .one,
+.step_1 .text .one,
+.food_2 .text .one,
+.ingred_2 .text .one,
+.step_2 .text .one,
+.food_3 .text .one,
+.ingred_3 .text .one,
+.step_3 .text .one {
+    font-size: clamp(26px, 3.2vw, 40px);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.about .text,
+.food .text,
+.mission .text,
+.vision .text,
+.food_1 .text,
+.ingred_1 .text,
+.step_1 .text,
+.food_2 .text,
+.ingred_2 .text,
+.step_2 .text,
+.food_3 .text,
+.ingred_3 .text,
+.step_3 .text {
+    font-size: clamp(16px, 1.5vw, 20px);
+    line-height: 1.65;
+}
+
+.container {
+    width: min(100% - 32px, 1000px);
+}
+
+.type {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    padding: 28px clamp(18px, 5vw, 64px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.info,
+.follow {
+    flex: 1 1 220px;
+    min-width: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.box_three {
+    flex: 1 1 240px;
+    min-width: 0;
+}
+
+.box_three .tit_f,
+.box_three div:nth-child(2) {
+    margin: 0 0 12px;
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+.box_three div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.box_three div:nth-child(3) input:nth-child(1) {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border-width: 2px;
+}
+
+.box_three input:nth-child(2) {
+    position: static;
+    flex: 0 0 auto;
+    margin: 0 0 0 8px;
+    padding: 10px 14px;
+}
+
+footer .rights {
+    min-height: 56px;
+    height: auto;
+    padding: 12px 16px;
+    font-size: 14px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+footer .rights p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    header {
+        justify-content: center;
+        padding: 16px 22px;
+    }
+
+    header nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about,
+    .food,
+    .mission,
+    .vision,
+    .food_1,
+    .ingred_1,
+    .step_1,
+    .food_2,
+    .ingred_2,
+    .step_2,
+    .food_3,
+    .ingred_3,
+    .step_3 {
+        gap: 24px;
+        padding: 32px 24px;
+    }
+
+    .about .image img,
+    .food .image img,
+    .mission .image img,
+    .vision .image img,
+    .food_1 .image img,
+    .ingred_1 .image img,
+    .step_1 .image img,
+    .food_2 .image img,
+    .ingred_2 .image img,
+    .step_2 .image img,
+    .food_3 .image img,
+    .ingred_3 .image img,
+    .step_3 .image img {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        position: sticky;
+        top: 0;
+        gap: 12px;
+        padding: 14px 12px;
+    }
+
+    header .two {
+        font-size: 22px;
+    }
+
+    header nav {
+        gap: 8px 14px;
+    }
+
+    header nav a {
+        font-size: 13px;
+    }
+
+    .landing,
+    .page_1,
+    .page_2,
+    .page_3 {
+        min-height: 300px;
+        height: 58svh;
+        font-size: clamp(28px, 8vw, 42px);
+        padding: 24px 16px;
+        background-position: center;
+    }
+
+    .about,
+    .food,
+    .mission,
+    .vision,
+    .food_1,
+    .ingred_1,
+    .step_1,
+    .food_2,
+    .ingred_2,
+    .step_2,
+    .food_3,
+    .ingred_3,
+    .step_3 {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 28px 18px;
+        gap: 22px;
+    }
+
+    .about .image,
+    .food .image,
+    .mission .image,
+    .vision .image,
+    .food_1 .image,
+    .ingred_1 .image,
+    .step_1 .image,
+    .food_2 .image,
+    .ingred_2 .image,
+    .step_2 .image,
+    .food_3 .image,
+    .ingred_3 .image,
+    .step_3 .image {
+        order: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about .text,
+    .food .text,
+    .mission .text,
+    .vision .text,
+    .food_1 .text,
+    .ingred_1 .text,
+    .step_1 .text,
+    .food_2 .text,
+    .ingred_2 .text,
+    .step_2 .text,
+    .food_3 .text,
+    .ingred_3 .text,
+    .step_3 .text {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        gap: 14px;
+    }
+
+    .about .image img,
+    .food .image img,
+    .mission .image img,
+    .vision .image img,
+    .food_1 .image img,
+    .ingred_1 .image img,
+    .step_1 .image img,
+    .food_2 .image img,
+    .ingred_2 .image img,
+    .step_2 .image img,
+    .food_3 .image img,
+    .ingred_3 .image img,
+    .step_3 .image img {
+        height: auto;
+        min-height: 0;
+        max-height: 340px;
+        aspect-ratio: 4 / 3;
+    }
+
+    .about .text div:nth-child(2),
+    .food .text .one,
+    .mission .text .one,
+    .vision .text .one,
+    .food_1 .text .one,
+    .ingred_1 .text .one,
+    .step_1 .text .one,
+    .food_2 .text .one,
+    .ingred_2 .text .one,
+    .step_2 .text .one,
+    .food_3 .text .one,
+    .ingred_3 .text .one,
+    .step_3 .text .one {
+        font-size: clamp(25px, 7vw, 32px);
+    }
+
+    .type {
+        flex-direction: column;
+        gap: 24px;
+        padding: 28px 20px;
+        background-position: center;
+    }
+
+    .info,
+    .follow,
+    .box_three {
+        width: 100%;
+        flex-basis: auto;
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .box_three .tit_f,
+    .box_three div:nth-child(2) {
+        margin: 0 0 12px;
+    }
+
+    footer .rights {
+        font-size: 12px;
+    }
+}
