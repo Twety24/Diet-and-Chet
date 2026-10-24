@@ -594,22 +594,18 @@ footer .rights {
     font-weight: 700;
 }
 
-/* Responsive layout improvements */
+/* Responsive layout rules matched to the actual HTML classes */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-html {
-    width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
-
+html,
 body {
     width: 100%;
     min-width: 0;
+    margin: 0;
     overflow-x: hidden;
 }
 
@@ -617,19 +613,14 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
-    object-fit: cover;
-}
-
-section {
-    min-width: 0;
 }
 
 header {
     width: 100%;
-    min-height: 90px;
     height: auto;
-    gap: 20px;
-    padding: 16px clamp(18px, 5vw, 64px);
+    min-height: 90px;
+    padding: 16px clamp(16px, 4vw, 64px);
+    gap: 16px;
     flex-wrap: wrap;
 }
 
@@ -644,13 +635,12 @@ header nav {
     align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 12px 22px;
+    gap: 10px 20px;
     min-width: 0;
 }
 
-header nav span,
-header .first_link,
-header .sec_link {
+header nav .first_link,
+header nav .sec_link {
     margin: 0;
 }
 
@@ -664,11 +654,12 @@ header nav a {
 .page_2,
 .page_3 {
     width: 100%;
-    min-height: 360px;
+    min-height: 300px;
+    height: calc(100vh - 90px);
     height: calc(100svh - 90px);
-    padding: 32px 20px;
+    padding: 24px 16px;
     text-align: center;
-    font-size: clamp(30px, 5vw, 60px);
+    font-size: clamp(28px, 5vw, 60px);
     overflow-wrap: anywhere;
 }
 
@@ -685,11 +676,14 @@ header nav a {
 .food_3,
 .ingred_3,
 .step_3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: clamp(24px, 5vw, 64px);
-    gap: clamp(22px, 4vw, 48px);
+    padding: clamp(24px, 4vw, 56px);
+    gap: clamp(20px, 3vw, 40px);
 }
 
 .about .text,
@@ -708,6 +702,8 @@ header nav a {
     flex: 1 1 0;
     min-width: 0;
     margin: 0;
+    font-size: clamp(16px, 1.5vw, 20px);
+    line-height: 1.6;
     overflow-wrap: anywhere;
 }
 
@@ -725,11 +721,11 @@ header nav a {
 .ingred_3 .image,
 .step_3 .image {
     flex: 1 1 0;
-    min-width: 0;
     width: 100%;
+    min-width: 0;
     height: auto;
     margin: 0;
-    overflow: hidden;
+    display: block;
 }
 
 .about .image img,
@@ -745,11 +741,13 @@ header nav a {
 .food_3 .image img,
 .ingred_3 .image img,
 .step_3 .image img {
+    display: block;
     width: 100%;
-    height: 100%;
-    min-height: 260px;
-    border-radius: 12px;
+    height: auto;
+    max-height: 560px;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
+    border-radius: 12px;
 }
 
 .about .text div:nth-child(2),
@@ -765,46 +763,30 @@ header nav a {
 .food_3 .text .one,
 .ingred_3 .text .one,
 .step_3 .text .one {
-    font-size: clamp(26px, 3.2vw, 40px);
+    font-size: clamp(25px, 3vw, 40px);
     line-height: 1.2;
     overflow-wrap: anywhere;
 }
 
-.about .text,
-.food .text,
-.mission .text,
-.vision .text,
-.food_1 .text,
-.ingred_1 .text,
-.step_1 .text,
-.food_2 .text,
-.ingred_2 .text,
-.step_2 .text,
-.food_3 .text,
-.ingred_3 .text,
-.step_3 .text {
-    font-size: clamp(16px, 1.5vw, 20px);
-    line-height: 1.65;
-}
-
 .container {
     width: min(100% - 32px, 1000px);
+    max-width: 100%;
 }
 
 .type {
     width: 100%;
     height: auto;
     min-height: 250px;
-    padding: 28px clamp(18px, 5vw, 64px);
+    padding: 28px clamp(18px, 4vw, 64px);
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 28px;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
-.info,
-.follow {
+.type .info,
+.type .follow {
     flex: 1 1 220px;
     min-width: 0;
     margin: 0;
@@ -813,39 +795,42 @@ header nav a {
     overflow-wrap: anywhere;
 }
 
-.box_three {
+.type .box_three {
     flex: 1 1 240px;
     min-width: 0;
 }
 
-.box_three .tit_f,
-.box_three div:nth-child(2) {
+.type .box_three .tit_f,
+.type .box_three > div:nth-child(2) {
     margin: 0 0 12px;
     font-size: 18px;
     overflow-wrap: anywhere;
 }
 
-.box_three div:nth-child(3) {
+.type .box_three > div:nth-child(3) {
     display: flex;
     align-items: center;
     width: 100%;
+    gap: 8px;
 }
 
-.box_three div:nth-child(3) input:nth-child(1) {
+.type .box_three input:nth-child(1) {
+    flex: 1 1 auto;
     width: 100%;
     min-width: 0;
     padding: 12px;
     border-width: 2px;
 }
 
-.box_three input:nth-child(2) {
+.type .box_three input:nth-child(2) {
     position: static;
     flex: 0 0 auto;
-    margin: 0 0 0 8px;
+    margin: 0;
     padding: 10px 14px;
 }
 
 footer .rights {
+    width: 100%;
     min-height: 56px;
     height: auto;
     padding: 12px 16px;
@@ -861,7 +846,6 @@ footer .rights p {
 @media (max-width: 900px) {
     header {
         justify-content: center;
-        padding: 16px 22px;
     }
 
     header nav {
@@ -882,31 +866,13 @@ footer .rights p {
     .food_3,
     .ingred_3,
     .step_3 {
-        gap: 24px;
         padding: 32px 24px;
-    }
-
-    .about .image img,
-    .food .image img,
-    .mission .image img,
-    .vision .image img,
-    .food_1 .image img,
-    .ingred_1 .image img,
-    .step_1 .image img,
-    .food_2 .image img,
-    .ingred_2 .image img,
-    .step_2 .image img,
-    .food_3 .image img,
-    .ingred_3 .image img,
-    .step_3 .image img {
-        min-height: 220px;
+        gap: 24px;
     }
 }
 
 @media (max-width: 600px) {
     header {
-        position: sticky;
-        top: 0;
         gap: 12px;
         padding: 14px 12px;
     }
@@ -927,9 +893,10 @@ footer .rights p {
     .page_1,
     .page_2,
     .page_3 {
-        min-height: 300px;
+        min-height: 260px;
+        height: 58vh;
         height: 58svh;
-        font-size: clamp(28px, 8vw, 42px);
+        font-size: clamp(27px, 7.5vw, 42px);
         padding: 24px 16px;
         background-position: center;
     }
@@ -950,7 +917,26 @@ footer .rights p {
         flex-direction: column;
         align-items: stretch;
         padding: 28px 18px;
-        gap: 22px;
+        gap: 20px;
+    }
+
+    .about .text,
+    .food .text,
+    .mission .text,
+    .vision .text,
+    .food_1 .text,
+    .ingred_1 .text,
+    .step_1 .text,
+    .food_2 .text,
+    .ingred_2 .text,
+    .step_2 .text,
+    .food_3 .text,
+    .ingred_3 .text,
+    .step_3 .text {
+        order: 1;
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
     }
 
     .about .image,
@@ -971,26 +957,6 @@ footer .rights p {
         max-width: 100%;
     }
 
-    .about .text,
-    .food .text,
-    .mission .text,
-    .vision .text,
-    .food_1 .text,
-    .ingred_1 .text,
-    .step_1 .text,
-    .food_2 .text,
-    .ingred_2 .text,
-    .step_2 .text,
-    .food_3 .text,
-    .ingred_3 .text,
-    .step_3 .text {
-        order: 1;
-        width: 100%;
-        max-width: 100%;
-        font-size: 16px;
-        gap: 14px;
-    }
-
     .about .image img,
     .food .image img,
     .mission .image img,
@@ -1004,8 +970,8 @@ footer .rights p {
     .food_3 .image img,
     .ingred_3 .image img,
     .step_3 .image img {
+        width: 100%;
         height: auto;
-        min-height: 0;
         max-height: 340px;
         aspect-ratio: 4 / 3;
     }
@@ -1023,27 +989,27 @@ footer .rights p {
     .food_3 .text .one,
     .ingred_3 .text .one,
     .step_3 .text .one {
-        font-size: clamp(25px, 7vw, 32px);
+        font-size: clamp(24px, 7vw, 32px);
     }
 
     .type {
         flex-direction: column;
+        align-items: stretch;
         gap: 24px;
         padding: 28px 20px;
-        background-position: center;
     }
 
-    .info,
-    .follow,
-    .box_three {
+    .type .info,
+    .type .follow,
+    .type .box_three {
         width: 100%;
-        flex-basis: auto;
+        flex: 0 0 auto;
         margin: 0;
         font-size: 15px;
     }
 
-    .box_three .tit_f,
-    .box_three div:nth-child(2) {
+    .type .box_three .tit_f,
+    .type .box_three > div:nth-child(2) {
         margin: 0 0 12px;
     }
 
